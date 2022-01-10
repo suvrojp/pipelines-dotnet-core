@@ -14,7 +14,7 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'sjp dotnet build $(buildConfiguration)'
 # - task: PublishCodeCoverageResults@1
 #   inputs:
 #     codeCoverageTool: "JaCoCo"
