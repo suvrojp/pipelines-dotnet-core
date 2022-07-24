@@ -18,7 +18,7 @@ namespace pipelines_dotnet_core
         {
             Configuration = configuration;
         }
-
+        //Putting a comment to check
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -59,6 +59,8 @@ namespace pipelines_dotnet_core
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            
+            
         }
     }
 }
