@@ -5,6 +5,9 @@
 
 trigger:
 - master
+- 
+# pr:
+# - master
 
 pool:
   vmImage: windows-latest
@@ -15,9 +18,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: "JaCoCo"
-    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
-    reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
-    failIfCoverageEmpty: true
+# - task: PublishCodeCoverageResults@1
+#   inputs:
+#     codeCoverageTool: "JaCoCo"
+#     summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
+#     reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
+#     failIfCoverageEmpty: true
